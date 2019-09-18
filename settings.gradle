@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':user', ':shop', ':common', ':arouter_api', ':arouter_compiler', ':arouter_annotations'
 rootProject.name='ModularDemo'

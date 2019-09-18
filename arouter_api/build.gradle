@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // 引入注解中RouterBean对象（java项目才有javax.lang包）
+    api project(':arouter_annotations')
+}
+// java控制台输出中文乱码
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
